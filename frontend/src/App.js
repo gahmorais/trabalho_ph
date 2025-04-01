@@ -79,7 +79,7 @@ function Maquina({ nome }) {
       const response = await chamarBackend(
         `http://localhost:8080/api/maquinas/${nome.toLowerCase()}/adicionarMoeda`,
         'POST',
-        valor //Maneira correta de enviar o valor
+        valor //Maneira correta de enviar o valor..
         // { valor } // Não é necessário desestruturar o valor.
       );
       setMensagem(response);
@@ -96,7 +96,7 @@ function Maquina({ nome }) {
         `http://localhost:8080/api/maquinas/${nome.toLowerCase()}/comprarDoce`,
         'POST',
         tipo
-        // { tipo }
+        // { tipo } //Remoção da desestruturação ..
       );
       setMensagem(response);
       if (response.includes("Você comprou")) {

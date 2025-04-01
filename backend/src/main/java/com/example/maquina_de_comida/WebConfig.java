@@ -10,8 +10,8 @@ public class WebConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                .allowedOrigins("http://localhost:3000") // Endereço do frontend React
-                .allowedMethods("GET", "POST", "PUT", "DELETE");
-            //    .allowedMethods("*")
+                .allowedMethods("GET", "POST", "PUT", "DELETE"); 
+            //    .allowedMethods("*") // remoção das opções de cors e permitindo a conexão de qualquer ip
 //                .allowCredentials(true);
 //        http://localhost:8080/api/maquinas/instalar
     }

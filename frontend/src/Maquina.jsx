@@ -29,7 +29,8 @@ function Maquina({ nome }) {
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ tipo }),
+          //body: JSON.stringify({ tipo }),
+          body: tipo
         }
       );
       const data = await response.text();

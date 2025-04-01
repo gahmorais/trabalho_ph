@@ -1,5 +1,7 @@
 package com.example.maquina_de_comida;
 
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
+
 public class Maquina {
     private String nome;
     private int saldo;
@@ -28,8 +30,8 @@ public class Maquina {
 
     public String comprarDoce(String tipo) {
         int preco = 0;
-        //A letra está vindo acompanhada de aspas do frontend, precisa tratar
-        //Como medida paleativa utilizar replace para rancar as aspas
+        //A letra está vindo acompanhada de aspas do frontend, precisa tratar..
+        //Como medida paleativa utilizar replace para rancar as aspas..
         String tipoCorrigido = tipo.replace("\"","");
         switch (tipoCorrigido) {
             case "A": preco = 6; break;
