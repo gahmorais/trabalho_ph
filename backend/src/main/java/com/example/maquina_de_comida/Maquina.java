@@ -28,7 +28,10 @@ public class Maquina {
 
     public String comprarDoce(String tipo) {
         int preco = 0;
-        switch (tipo) {
+        //A letra está vindo acompanhada de aspas do frontend, precisa tratar
+        //Como medida paleativa utilizar replace para rancar as aspas
+        String tipoCorrigido = tipo.replace("\"","");
+        switch (tipoCorrigido) {
             case "A": preco = 6; break;
             case "B": preco = 7; break;
             case "C": preco = 8; break;

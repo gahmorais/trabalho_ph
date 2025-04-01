@@ -9,12 +9,14 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 
-@SpringBootApplication(exclude = {SecurityAutoConfiguration.class })
+//adicionado exclude para não precisar de login para utilizar o spring
+@SpringBootApplication(exclude = {SecurityAutoConfiguration.class })  
 public class ServidorApplication {
     public static void main(String[] args) {
         SpringApplication.run(ServidorApplication.class, args);
     }
 
+    //Método utilizado para carregar todos os arquivos no projeto
     @Bean
 	public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
 		return args -> {

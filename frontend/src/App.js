@@ -79,8 +79,8 @@ function Maquina({ nome }) {
       const response = await chamarBackend(
         `http://localhost:8080/api/maquinas/${nome.toLowerCase()}/adicionarMoeda`,
         'POST',
-        valor
-        // { valor }
+        valor //Maneira correta de enviar o valor
+        // { valor } // Não é necessário desestruturar o valor.
       );
       setMensagem(response);
       setSaldo((prevSaldo) => prevSaldo + valor);
@@ -120,9 +120,9 @@ function Maquina({ nome }) {
       </div>
       <h3>Escolha seu doce:</h3>
       <div className="sweet-buttons">
-        <button className="warning-button" onClick={() => comprarDoce('A')}>Doce A (R$6,00)</button>
-        <button className="warning-button" onClick={() => comprarDoce('B')}>Doce B (R$7,00)</button>
-        <button className="warning-button" onClick={() => comprarDoce('C')}>Doce C (R$8,00)</button>
+        <button className="warning-button" onClick={() => comprarDoce("A")}>Doce A (R$6,00)</button>
+        <button className="warning-button" onClick={() => comprarDoce("B")}>Doce B (R$7,00)</button>
+        <button className="warning-button" onClick={() => comprarDoce("C")}>Doce C (R$8,00)</button>
       </div>
       {mensagem && <p className="message"><strong>{mensagem}</strong></p>}
       <CandyMachineAnimation showCandy={showCandy} />

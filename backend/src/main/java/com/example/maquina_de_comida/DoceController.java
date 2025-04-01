@@ -44,7 +44,7 @@ public class DoceController {
 
     @PostMapping("/{nome}/comprarDoce")
     public String comprarDoce(@PathVariable String nome, @RequestBody String tipo) {
-        System.out.print("Valor: " + tipo);
+        
         Maquina maquina = getMaquina(nome);
         if (maquina == null) {
             return "Máquina não encontrada!";
